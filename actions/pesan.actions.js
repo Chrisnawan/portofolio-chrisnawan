@@ -6,7 +6,7 @@ import { Resend } from 'resend';
 import { sql } from '@/lib/db';
 import { getCurrentAdmin } from '@/lib/auth';
 
-const NOTIF_EMAIL = 'Satyachrisna9@gmail.com';
+const NOTIF_EMAIL = 'satyachrisna9@gmail.com';
 
 async function sendPesanNotification({ nama, email, pesan }) {
   if (!process.env.RESEND_API_KEY) return;
