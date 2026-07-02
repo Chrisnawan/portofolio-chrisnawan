@@ -2,8 +2,23 @@
 
 import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
+import { Resend } from 'resend';
 import { sql } from '@/lib/db';
 import { getCurrentAdmin } from '@/lib/auth';
+
+const NOTIF_EMAIL = 'Satyachrisna9@gmail.com';
+
+async function sendPesanNotification({ nama, email, pesan }) {
+  if (!process.env.RESEND_API_KEY) return;
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  await resend.emails.send({
+    from: 'Portofolio <onboarding@resend.dev>',
+    to: NOTIF_EMAIL,
+    replyTo: email,
+    subject: `Pesan baru dari ${nama} (Portofolio)`,
+    text: `Nama: ${nama}\nEmail: ${email}\n\nPesan:\n${pesan}`,
+  });
+}
 
 export async function submitPesan(prevState, formData) {
   const nama = (formData.get('nama') || '').trim();
@@ -21,6 +36,15 @@ export async function submitPesan(prevState, formData) {
   } catch {
     ok = false;
   }
+
+  if (ok) {
+    try {
+      await sendPesanNotification({ nama, email, pesan });
+    } catch {
+      // Penyimpanan ke database tetap berhasil walau notifikasi email gagal terkirim.
+    }
+  }
+
   redirect(ok ? '/?sukses=1#contact' : '/?error=1#contact');
 }
 
