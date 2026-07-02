@@ -141,7 +141,8 @@ header.scrolled{background:rgba(8,8,14,.72);backdrop-filter:blur(14px);border-bo
   background:linear-gradient(120deg,var(--accent) 0%,#a9a2ff 50%,var(--data) 130%);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 }
-.hero p.lead{color:var(--muted);font-size:1.1rem;max-width:490px;margin-top:26px}
+.hero .lead{color:var(--muted);font-size:1.1rem;max-width:490px;margin-top:26px}
+.hero .lead p+p{margin-top:12px}
 .hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
 .btn{
   font-family:var(--font-space-grotesk),sans-serif;font-weight:500;font-size:.98rem;text-decoration:none;

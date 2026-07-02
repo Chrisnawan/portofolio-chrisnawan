@@ -22,9 +22,18 @@ export default function Hero() {
               Data Analyst
               <br />& <span className="grad">AI Engineer</span>
             </Reveal>
-            <Reveal as="p" className="lead">
-              Mahasiswa Informatika AMIKOM yang mengubah data mentah menjadi insight — dari data
-              wrangling &amp; EDA hingga dashboard interaktif dengan Python, SQL, dan Streamlit.
+            <Reveal as="div" className="lead">
+              <p>
+                Saya seorang mahasiswa Informatika di Universitas AMIKOM Yogyakarta dengan
+                ketertarikan mendalam pada dunia data. Fokus saya adalah menerjemahkan data
+                kompleks menjadi cerita yang mudah dipahami dan keputusan yang tepat.
+              </p>
+              <p>
+                Alur kerja saya mencakup keseluruhan proses analisis: mulai dari membersihkan dan
+                menyiapkan data (data wrangling), menggali pola melalui exploratory data analysis
+                (EDA), hingga menyajikan temuan dalam bentuk dashboard interaktif yang bisa
+                digunakan langsung oleh stakeholder.
+              </p>
             </Reveal>
             <Reveal as="div" className="hero-actions">
               <a href="#contact" className="btn btn-primary" ref={ctaRef}>
