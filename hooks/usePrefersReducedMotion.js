@@ -1,0 +1,17 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+export function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(false);
+
+  useEffect(() => {
+    const mql = matchMedia('(prefers-reduced-motion:reduce)');
+    setReduced(mql.matches);
+    const onChange = () => setReduced(mql.matches);
+    mql.addEventListener('change', onChange);
+    return () => mql.removeEventListener('change', onChange);
+  }, []);
+
+  return reduced;
+}
