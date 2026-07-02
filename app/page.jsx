@@ -10,6 +10,7 @@ import Projects from '@/components/site/Projects';
 import Education from '@/components/site/Education';
 import Contact from '@/components/site/Contact';
 import Footer from '@/components/site/Footer';
+import ChatWidget from '@/components/site/ChatWidget';
 import { getProyek } from '@/lib/db';
 
 // Membaca `searchParams` (untuk pesan sukses/error dari form kontak)
@@ -34,6 +35,7 @@ export default async function HomePage({ searchParams }) {
       <Education />
       <Contact sukses={params?.sukses !== undefined} gagal={params?.error !== undefined} />
       <Footer />
+      <ChatWidget />
     </>
   );
 }
