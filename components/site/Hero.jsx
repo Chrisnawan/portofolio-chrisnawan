@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="hero-grid">
           <div className="hero-left">
             <Reveal as="p" className="hero-hello">
-              Halo, saya <b>Chrisnawan Prastya Atmaja</b> 👋
+              Halo, saya <b>Chrisnawan Prastya Atmaja</b>
             </Reveal>
             <Reveal as="h1">
               Data Analyst
