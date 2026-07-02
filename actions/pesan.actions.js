@@ -20,7 +20,7 @@ async function sendPesanNotification({ nama, email, pesan }) {
   });
 }
 
-export async function submitPesan(prevState, formData) {
+export async function submitPesan(formData) {
   const nama = (formData.get('nama') || '').trim();
   const email = (formData.get('email') || '').trim();
   const pesan = (formData.get('pesan') || '').trim();
