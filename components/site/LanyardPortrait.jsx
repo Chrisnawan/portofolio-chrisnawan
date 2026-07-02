@@ -82,7 +82,7 @@ export default function LanyardPortrait() {
         dx *= k; dy *= k;
       }
       x = dx; y = dy;
-      rot = Math.max(-48, Math.min(48, x * 0.28));
+      rot = Math.max(-48, Math.min(48, -x * 0.28));
       applyTransform();
     }
     function onPointerUp() {
