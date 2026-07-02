@@ -10,13 +10,43 @@ const GROUPS = [
   {
     title: 'Bahasa & Tools',
     chips: [
-      'Python', 'Pandas', 'NumPy', 'SQL', 'MySQL', 'SQLite', 'Spreadsheet', 'Git / GitHub',
-      'C++', 'C#', 'C', 'Arduino IDE (IoT)', 'Linux', 'Bahasa Inggris',
+      'Python', 'Pandas', 'NumPy', 'SQL', 'MySQL', 'SQLite', 'SQL Server', 'Spreadsheet', 'Git / GitHub',
+      'C++', 'C#', 'C', 'Arduino IDE (IoT)', 'Wokwi (ESP32/ESP8266)', 'Linux', 'Bahasa Inggris',
     ],
   },
   {
     title: 'Machine Learning',
-    chips: ['Supervised Learning', 'Unsupervised Learning', 'Feature Engineering', 'Model Evaluation', 'TensorFlow'],
+    chips: ['Feature Engineering', 'Model Evaluation'],
+  },
+  {
+    title: 'Supervised Learning',
+    chips: [
+      'Linear Regression', 'Logistic Regression', 'Decision Tree', 'Random Forest',
+      'XGBoost', 'LightGBM', 'CatBoost', 'Support Vector Machine (SVM)',
+      'K-Nearest Neighbors (KNN)', 'Naive Bayes', 'AdaBoost',
+      'Gradient Boosting Machine (GBM)', 'Extra Trees',
+    ],
+  },
+  {
+    title: 'Unsupervised Learning',
+    chips: [
+      'K-Means', 'Hierarchical Clustering', 'DBSCAN', 'Gaussian Mixture Model (GMM)',
+      'Mean Shift', 'Principal Component Analysis (PCA)', 'Independent Component Analysis (ICA)',
+      't-SNE', 'UMAP',
+    ],
+  },
+  {
+    title: 'Semi-Supervised Learning',
+    chips: ['Self-Training', 'Label Propagation', 'Label Spreading', 'Pseudo Labeling'],
+  },
+  {
+    title: 'Deep Learning',
+    chips: [
+      'Multi-Layer Perceptron (MLP)', 'Convolutional Neural Network (CNN)',
+      'Recurrent Neural Network (RNN)', 'Long Short-Term Memory (LSTM)',
+      'Gated Recurrent Unit (GRU)', 'Autoencoder', 'Generative Adversarial Network (GAN)',
+      'TensorFlow',
+    ],
   },
   {
     title: 'Web & Desain',
