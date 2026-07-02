@@ -9,7 +9,10 @@ const GROUPS = [
   },
   {
     title: 'Bahasa & Tools',
-    chips: ['Python', 'Pandas', 'NumPy', 'SQL', 'Spreadsheet', 'Git / GitHub'],
+    chips: [
+      'Python', 'Pandas', 'NumPy', 'SQL', 'MySQL', 'SQLite', 'Spreadsheet', 'Git / GitHub',
+      'C++', 'C#', 'C', 'Arduino IDE (IoT)', 'Linux', 'Bahasa Inggris',
+    ],
   },
   {
     title: 'Machine Learning',
@@ -17,7 +20,11 @@ const GROUPS = [
   },
   {
     title: 'Web & Desain',
-    chips: ['HTML / CSS', 'Laravel', 'Bootstrap', 'UI/UX', 'Illustrator', 'Photoshop'],
+    chips: [
+      'HTML / CSS', 'Laravel', 'Bootstrap', 'UI/UX', 'Figma',
+      'Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign',
+      'Adobe Premiere Pro', 'Adobe After Effects', 'Adobe Lightroom',
+    ],
   },
 ];
 
