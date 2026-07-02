@@ -11,6 +11,13 @@ export default function ProjectCard({ proyek }) {
     .map((t) => t.trim())
     .filter(Boolean);
 
+  const link = proyek.link_github || '';
+  const linkLabel = link.includes('figma.com')
+    ? 'Lihat di Figma →'
+    : link.includes('github.com')
+    ? 'Lihat di GitHub →'
+    : 'Lihat Proyek →';
+
   return (
     <article className="pcard" ref={ref}>
       <div className="pcard-bar"></div>
@@ -35,9 +42,9 @@ export default function ProjectCard({ proyek }) {
             ))}
           </div>
         )}
-        {proyek.link_github && (
-          <a href={proyek.link_github} target="_blank" rel="noopener noreferrer" className="plink">
-            Lihat di GitHub →
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer" className="plink">
+            {linkLabel}
           </a>
         )}
       </div>

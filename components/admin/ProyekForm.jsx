@@ -42,13 +42,14 @@ export default function ProyekForm({ action, initial = {}, submitLabel }) {
             <div className="hint">Pisahkan dengan koma.</div>
           </div>
           <div className="field">
-            <label>Link GitHub</label>
+            <label>Link Proyek</label>
             <input
               name="link_github"
               type="text"
               defaultValue={initial.link_github}
-              placeholder="https://github.com/Chrisnawan/nama-repo"
+              placeholder="https://github.com/... atau https://figma.com/..."
             />
+            <div className="hint">Bisa link GitHub, Figma, atau demo lainnya.</div>
           </div>
           <div className="field">
             <label>Urutan</label>

@@ -20,9 +20,7 @@ export default function Hero() {
             </Reveal>
             <Reveal as="h1">
               Data Analyst
-              <br />& <span className="grad">Visualisasi</span>
-              <br />
-              Data
+              <br />& <span className="grad">AI Engineer</span>
             </Reveal>
             <Reveal as="p" className="lead">
               Mahasiswa Informatika AMIKOM yang mengubah data mentah menjadi insight — dari data

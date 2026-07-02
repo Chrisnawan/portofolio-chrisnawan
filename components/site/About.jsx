@@ -12,19 +12,22 @@ export default function About() {
             <p className="about-name">Chrisnawan Prastya Atmaja</p>
             <p className="about-role">// Aspiring Data Analyst · Data Visualization</p>
             <p style={{ marginTop: 24 }}>
-              Saya mahasiswa Informatika di Universitas AMIKOM Yogyakarta yang berfokus pada
-              analisis dan visualisasi data. Saya terbiasa mengolah data mulai dari pembersihan
-              (data wrangling) dan eksplorasi (EDA) hingga menyajikannya dalam bentuk visualisasi
-              dan dashboard interaktif.
+              I am an Informatics student with a strong interest in Artificial Intelligence, Data
+              Science, Machine Learning, and Software Development. I have experience developing
+              various technology-based projects, including image classification systems, financial
+              forecasting models, and interactive dashboards using TensorFlow, Streamlit, FastAPI,
+              and Python.
             </p>
             <p>
-              Didukung sertifikasi kompetensi di bidang analisis data, visualisasi data, dan
-              statistika, saya antusias mengubah data mentah menjadi insight yang membantu
-              pengambilan keputusan.
+              My expertise includes data preprocessing, machine learning and deep learning model
+              development, API integration, and data visualization. I am also experienced in
+              conducting research, collaborative teamwork, and preparing technical reports and
+              scientific papers.
             </p>
             <p>
-              Selain analisis data, saya juga menyukai dunia pengembangan web dan desain —
-              menjembatani angka dengan antarmuka yang mudah dipahami siapa pun.
+              I am passionate about leveraging technology to solve real-world problems and
+              continuously improving my skills in AI Engineering, Data Analytics, and modern
+              software development.
             </p>
           </Reveal>
           <Reveal as="div" className="about-meta">
