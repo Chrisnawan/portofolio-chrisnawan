@@ -63,10 +63,10 @@ body{
 }
 .section-sub{color:var(--muted);max-width:560px;margin-top:16px;font-size:1.02rem}
 
-/* ---------- split-word heading reveal ---------- */
-.split-reveal .word{display:inline-block;overflow:hidden;vertical-align:top}
-.split-reveal .word>span{display:inline-block;transform:translateY(115%);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
-.split-reveal.in .word>span{transform:translateY(0)}
+/* ---------- typewriter heading reveal ---------- */
+.type-cursor{display:none;color:var(--accent);font-weight:400}
+.type-cursor.typing{display:inline-block;animation:cursor-blink 1s step-end infinite}
+@keyframes cursor-blink{0%,100%{opacity:1}50%{opacity:0}}
 
 /* ---------- intro loading screen ---------- */
 html.intro-lock{overflow:hidden}
@@ -404,7 +404,7 @@ footer{border-top:1px solid var(--line);padding:40px 0}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important}
   .reveal,.stagger>*{opacity:1;transform:none;transition:none}
-  .split-reveal .word>span{transform:none;transition:none}
+  .type-cursor{display:none!important}
   .pcard::before,.stack-card::before{display:none}
   .portrait-wrap.idle{animation:none}
   .portrait-wrap{cursor:default}
