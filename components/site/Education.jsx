@@ -15,21 +15,30 @@ const TIMELINE = [
   },
 ];
 
+// Taruh file gambar/PDF sertifikat di folder public/certificates/,
+// lalu isi properti `file` dengan nama filenya, mis: 'ethical-hacking.pdf'.
 const PELATIHAN = [
-  { title: 'Teknik Ethical Hacking & Cyber Security (Pentester / White Hat)', yr: 'Okt 2023' },
-  { title: 'Membuat Ilustrasi dengan Adobe Illustrator', yr: 'Nov 2023' },
+  { title: 'Teknik Ethical Hacking & Cyber Security (Pentester / White Hat)', yr: 'Okt 2023', file: 'coursenet-ethical-hacking.pdf' },
+  { title: 'Membuat Ilustrasi dengan Adobe Illustrator', yr: 'Nov 2023', file: 'cakap-adobe-illustrator.pdf' },
+];
+
+const SERTIFIKAT_KEGIATAN = [
+  { title: 'Introduction to Computer (ITC) 2023', yr: 'Ags 2023', file: 'amikom-itc-2023.pdf' },
+  { title: 'Webinar Kuliah Kerja Ngoding (KKN)', yr: 'Jan 2024', file: 'geekacademy-webinar-kkn.pdf' },
+  { title: 'Kunjungan Industri HMIF', yr: 'Mei 2025', file: 'amikom-kunjungan-industri-hmif.pdf' },
+  { title: 'Seminar Stress Management in Career Development', yr: 'Okt 2025', file: 'amikom-seminar-stress-management.pdf' },
 ];
 
 const SERTIFIKASI = [
-  { title: 'Belajar Fundamental Analisis Data', yr: 'Apr 2026' },
-  { title: 'Belajar Matematika untuk Data Science', yr: 'Mar 2026' },
-  { title: 'Belajar Machine Learning untuk Pemula', yr: 'Mar 2026' },
-  { title: 'Belajar Dasar Data Science', yr: 'Feb 2026' },
-  { title: 'Belajar Dasar Visualisasi Data', yr: 'Feb 2026' },
-  { title: 'Memulai Pemrograman dengan Python', yr: 'Feb 2026' },
-  { title: 'Belajar Dasar Git dengan GitHub', yr: 'Feb 2026' },
-  { title: 'Dasar Pemrograman untuk Pengembang Software', yr: 'Feb 2026' },
-  { title: 'Pengenalan ke Logika Pemrograman (101)', yr: 'Feb 2026' },
+  { title: 'Belajar Fundamental Analisis Data', yr: 'Apr 2026', file: 'dicoding-fundamental-analisis-data.pdf' },
+  { title: 'Belajar Matematika untuk Data Science', yr: 'Mar 2026', file: 'dicoding-matematika-data-science.pdf' },
+  { title: 'Belajar Machine Learning untuk Pemula', yr: 'Mar 2026', file: 'dicoding-machine-learning-pemula.pdf' },
+  { title: 'Belajar Dasar Data Science', yr: 'Feb 2026', file: 'dicoding-dasar-data-science.pdf' },
+  { title: 'Belajar Dasar Visualisasi Data', yr: 'Feb 2026', file: 'dicoding-dasar-visualisasi-data.pdf' },
+  { title: 'Memulai Pemrograman dengan Python', yr: 'Feb 2026', file: 'dicoding-pemrograman-python.pdf' },
+  { title: 'Belajar Dasar Git dengan GitHub', yr: 'Feb 2026', file: 'dicoding-dasar-git-github.pdf' },
+  { title: 'Dasar Pemrograman untuk Pengembang Software', yr: 'Feb 2026', file: 'dicoding-dasar-pemrograman-software.pdf' },
+  { title: 'Pengenalan ke Logika Pemrograman (101)', yr: 'Feb 2026', file: 'dicoding-logika-pemrograman-101.pdf' },
 ];
 
 export default function Education() {
@@ -57,6 +66,36 @@ export default function Education() {
                 <div className="cert" key={c.title}>
                   <span className="ico">✦</span>
                   {c.title}
+                  {c.file && (
+                    <a
+                      href={`/certificates/${c.file}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cert-link"
+                    >
+                      Lihat Sertifikat →
+                    </a>
+                  )}
+                  <span className="yr">{c.yr}</span>
+                </div>
+              ))}
+            </div>
+            <p className="cert-issuer">Sertifikat Kegiatan & Seminar</p>
+            <div className="certs">
+              {SERTIFIKAT_KEGIATAN.map((c) => (
+                <div className="cert" key={c.title}>
+                  <span className="ico">✦</span>
+                  {c.title}
+                  {c.file && (
+                    <a
+                      href={`/certificates/${c.file}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cert-link"
+                    >
+                      Lihat Sertifikat →
+                    </a>
+                  )}
                   <span className="yr">{c.yr}</span>
                 </div>
               ))}
@@ -69,6 +108,16 @@ export default function Education() {
                 <div className="cert" key={c.title}>
                   <span className="ico">✦</span>
                   {c.title}
+                  {c.file && (
+                    <a
+                      href={`/certificates/${c.file}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cert-link"
+                    >
+                      Lihat Sertifikat →
+                    </a>
+                  )}
                   <span className="yr">{c.yr}</span>
                 </div>
               ))}
