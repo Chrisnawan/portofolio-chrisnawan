@@ -49,7 +49,7 @@ export default function Hero() {
               </a>
             </Reveal>
             <Reveal as="div" className="hero-stats" stagger>
-              <div className="stat">
+              <div className="stat stat-highlight">
                 <StatCounter value="3.62" />
                 <div className="lbl">IPK · Semester 6</div>
               </div>
