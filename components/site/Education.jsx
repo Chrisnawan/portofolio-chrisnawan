@@ -41,6 +41,24 @@ const SERTIFIKASI = [
   { title: 'Pengenalan ke Logika Pemrograman (101)', yr: 'Feb 2026', file: 'dicoding-logika-pemrograman-101.pdf' },
 ];
 
+function CertItem({ c }) {
+  const inner = (
+    <>
+      <span className="ico">✦</span>
+      {c.title}
+      <span className="yr">{c.yr}</span>
+    </>
+  );
+
+  return c.file ? (
+    <a href={`/certificates/${c.file}`} target="_blank" rel="noopener noreferrer" className="cert">
+      {inner}
+    </a>
+  ) : (
+    <div className="cert">{inner}</div>
+  );
+}
+
 export default function Education() {
   return (
     <section className="section" id="education">
@@ -63,41 +81,13 @@ export default function Education() {
             <p className="cert-issuer">Pelatihan Lainnya</p>
             <div className="certs">
               {PELATIHAN.map((c) => (
-                <div className="cert" key={c.title}>
-                  <span className="ico">✦</span>
-                  {c.title}
-                  {c.file && (
-                    <a
-                      href={`/certificates/${c.file}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cert-link"
-                    >
-                      Lihat Sertifikat →
-                    </a>
-                  )}
-                  <span className="yr">{c.yr}</span>
-                </div>
+                <CertItem c={c} key={c.title} />
               ))}
             </div>
             <p className="cert-issuer">Sertifikat Kegiatan & Seminar</p>
             <div className="certs">
               {SERTIFIKAT_KEGIATAN.map((c) => (
-                <div className="cert" key={c.title}>
-                  <span className="ico">✦</span>
-                  {c.title}
-                  {c.file && (
-                    <a
-                      href={`/certificates/${c.file}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cert-link"
-                    >
-                      Lihat Sertifikat →
-                    </a>
-                  )}
-                  <span className="yr">{c.yr}</span>
-                </div>
+                <CertItem c={c} key={c.title} />
               ))}
             </div>
           </Reveal>
@@ -105,21 +95,7 @@ export default function Education() {
             <p className="sub-label">Sertifikasi Kompetensi · Dicoding Indonesia</p>
             <div className="certs">
               {SERTIFIKASI.map((c) => (
-                <div className="cert" key={c.title}>
-                  <span className="ico">✦</span>
-                  {c.title}
-                  {c.file && (
-                    <a
-                      href={`/certificates/${c.file}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cert-link"
-                    >
-                      Lihat Sertifikat →
-                    </a>
-                  )}
-                  <span className="yr">{c.yr}</span>
-                </div>
+                <CertItem c={c} key={c.title} />
               ))}
             </div>
           </Reveal>

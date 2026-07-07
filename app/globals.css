@@ -302,11 +302,10 @@ header.scrolled{background:rgba(8,8,14,.72);backdrop-filter:blur(14px);border-bo
 .titem p{color:var(--muted-dim);font-size:.92rem;margin-top:8px}
 .sub-label{font-family:var(--font-jetbrains-mono),monospace;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-dim);margin-bottom:18px}
 .certs{display:flex;flex-direction:column;gap:10px}
-.cert{font-family:var(--font-inter),sans-serif;font-size:.9rem;color:var(--text);background:var(--surface);border:1px solid var(--line);padding:13px 16px;border-radius:11px;display:flex;align-items:center;gap:12px;transition:border-color .25s}
+.cert{font-family:var(--font-inter),sans-serif;font-size:.9rem;color:var(--text);background:var(--surface);border:1px solid var(--line);padding:13px 16px;border-radius:11px;display:flex;align-items:center;gap:12px;transition:border-color .25s;text-decoration:none}
 .cert:hover{border-color:var(--line-strong)}
+a.cert:hover{border-color:var(--accent)}
 .cert .ico{color:var(--data);flex-shrink:0}
-.cert-link{font-family:var(--font-jetbrains-mono),monospace;font-size:.72rem;color:var(--accent);white-space:nowrap;text-decoration:none;flex-shrink:0}
-.cert-link:hover{text-decoration:underline}
 .cert .yr{font-family:var(--font-jetbrains-mono),monospace;font-size:.72rem;color:var(--muted-dim);margin-left:auto;white-space:nowrap}
 .cert-issuer{font-family:var(--font-jetbrains-mono),monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:26px 0 14px}
 
