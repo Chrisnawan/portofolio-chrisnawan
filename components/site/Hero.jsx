@@ -50,6 +50,10 @@ export default function Hero() {
             </Reveal>
             <Reveal as="div" className="hero-stats" stagger>
               <div className="stat">
+                <StatCounter value="3.62" />
+                <div className="lbl">IPK · Semester 6</div>
+              </div>
+              <div className="stat">
                 <StatCounter value="9+" />
                 <div className="lbl">Sertifikasi Dicoding</div>
               </div>
